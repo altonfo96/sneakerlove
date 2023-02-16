@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/create'
+  get 'sessions/destroy'
 get '/users', to: 'users#index'
 get '/users/:id', to: 'users#show'
 post '/users', to: 'users#create'
@@ -18,6 +20,12 @@ post '/sneakers', to: 'sneakers#create'
 delete '/sneakers/:id', to: 'sneakers#destroy'
 patch '/sneakers/:id', to: 'sneakers#update'
 
+post '/signup', to: 'user#create'
+post '/login', to: 'sessions#create'
+get '/me', to: 'user#show'
+delete '/login', to: 'sessions#destroy'
 
+get 'session/create'
+get 'session/destroy'
 
 end
