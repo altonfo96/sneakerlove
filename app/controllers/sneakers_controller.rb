@@ -14,7 +14,7 @@ class SneakersController < ApplicationController
         render json: sneaker
     end
     def create
-        sneaker = Sneaker.create(user_id: params[:user_id], sneaker_id: params[:sneaker_id])
+        sneaker = Sneaker.create(id: params[:id], price: params[:price], image: params[:image], name: params[:name])
         render json: sneaker
     end
 
