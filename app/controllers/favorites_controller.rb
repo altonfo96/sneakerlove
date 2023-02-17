@@ -12,11 +12,11 @@ class FavoritesController < ApplicationController
 
     def update 
         favorite = Favorite.find_by!(id: params[:id])
-        render json: user
+        render json: favorite
     end
     def create
         favorite = Favorite.create(user_id: params[:user_id], sneaker_id: params[:sneaker_id])
-        render json: user
+        render json: favorite
     end
 
     def destroy
